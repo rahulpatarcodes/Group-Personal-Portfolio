@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #050505;
+    --bg-secondary: #0a0a0a;
+    --accent-red: #ff2200;
+    --accent-amber: #ff8c00;
+    --accent-orange: #ff4d00;
+    /* Shaikh Zubaid Cybersecurity Neon Emerald & Hacker Cyan Theme */
+    --accent-cyber: #00ff9d;
+    --accent-cyber-cyan: #00e5ff;
+    --accent-cyber-dark: #001a0e;
+    --text-primary: #f5f5f5;
+    --text-secondary: #a3a3a3;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #050505;
+    color: #f5f5f5;
+    color-scheme: dark;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #050505;
+    color: #f5f5f5;
+    overflow-x: hidden;
+    min-height: 100vh;
+    selection-background-color: #00ff9d;
+    selection-color: #000000;
+  }
+
+  ::selection {
+    background: #00ff9d;
+    color: #000000;
+  }
+
+  /* Sleek modern custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #050505;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #262626;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 140, 0, 0.25);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff8c00;
+  }
+}
+
+@layer utilities {
+  /* 3D Flip Card Utilities */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+
+  /* Cybersecurity Glow & Gradients (Shaikh Zubaid) */
+  .text-glow-cyber {
+    text-shadow: 0 0 15px rgba(0, 255, 157, 0.8), 0 0 35px rgba(0, 229, 255, 0.45);
+  }
+
+  .text-gradient-cyber {
+    background: linear-gradient(135deg, #ffffff 20%, #00ff9d 65%, #00e5ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .border-glow-cyber {
+    border-color: rgba(0, 255, 157, 0.45);
+    box-shadow: 0 0 25px rgba(0, 255, 157, 0.2);
+  }
+
+  /* Ambient Glow Utilities */
+  .text-glow-orange {
+    text-shadow: 0 0 20px rgba(255, 77, 0, 0.6), 0 0 40px rgba(255, 77, 0, 0.3);
+  }
+
+  .text-glow-red {
+    text-shadow: 0 0 20px rgba(255, 34, 0, 0.7), 0 0 45px rgba(255, 34, 0, 0.4);
+  }
+
+  .text-glow-amber {
+    text-shadow: 0 0 20px rgba(255, 140, 0, 0.7), 0 0 45px rgba(255, 140, 0, 0.35);
+  }
+
+  .text-gradient-orange {
+    background: linear-gradient(135deg, #ffffff 30%, #ff8c00 75%, #ff3700 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-red {
+    background: linear-gradient(135deg, #ffffff 25%, #ff3700 65%, #cc1100 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-amber {
+    background: linear-gradient(135deg, #ffffff 30%, #ffaa00 70%, #ff6f00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-fire {
+    background: linear-gradient(180deg, #ffaa00 0%, #ff3700 50%, #cc1100 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* High-Contrast Glass Card with Fallback for IDE Previews */
+  .glass-card {
+    background: rgba(14, 14, 14, 0.82);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .glass-card-hover {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .glass-card-hover:hover {
+    background: rgba(22, 22, 22, 0.92);
+    border-color: rgba(255, 140, 0, 0.45);
+    box-shadow: 0 10px 40px -10px rgba(255, 140, 0, 0.25);
+    transform: translateY(-2px);
+  }
+
+  .canvas-vignette {
+    pointer-events: none;
+    background: radial-gradient(
+      ellipse at center,
+      transparent 55%,
+      rgba(5, 5, 5, 0.4) 80%,
+      rgba(5, 5, 5, 0.98) 100%
+    );
+  }
+}
