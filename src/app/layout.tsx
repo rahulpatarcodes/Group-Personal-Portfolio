@@ -5,6 +5,7 @@ import { SoundProvider } from "@/components/UI/SoundManager";
 import { Navbar } from "@/components/Navigation/Navbar";
 import { CustomCursor } from "@/components/Navigation/CustomCursor";
 import { SmoothScrollProvider } from "@/components/UI/SmoothScrollProvider";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "SRA NEURAL — Shaikh Zubaid Hussain • Rahul Patar • Ashish Das | 1st Year B.Tech CSE",
@@ -63,6 +64,7 @@ export default function RootLayout({
             </SoundProvider>
           </ModeProvider>
         </SmoothScrollProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
