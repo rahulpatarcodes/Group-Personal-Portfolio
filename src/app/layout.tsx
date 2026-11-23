@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 import { ModeProvider } from "@/context/ModeContext";
 import { SoundProvider } from "@/components/UI/SoundManager";
 import { Navbar } from "@/components/Navigation/Navbar";
@@ -63,6 +64,7 @@ export default function RootLayout({
             </SoundProvider>
           </ModeProvider>
         </SmoothScrollProvider>
+        <Analytics />
       </body>
     </html>
   );
